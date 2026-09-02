@@ -47,6 +47,12 @@ export default function ShowingWeather({ weatherData }) {
                         </sup>
                     </div>
                     <p className="description">
+                        {/* <img
+                            src={(weatherData.weather[0].main == "Clouds") {
+
+                            }}
+                            alt=""
+                        /> */}
                         {weatherData.weather[0].description.toUpperCase()}
                     </p>
                     <div className="weather-details">
