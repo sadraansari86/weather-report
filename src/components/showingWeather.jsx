@@ -7,7 +7,7 @@ const options = {
     year: "numeric",
 };
 
-export default function ShowingWeather({ weatherData }) {
+export default function ShowingWeather({ weatherData, error }) {
     const [isCelsius, setIsCelsius] = useState(true);
 
     const toggleTemperature = () => {
@@ -24,6 +24,7 @@ export default function ShowingWeather({ weatherData }) {
 
     return (
         <>
+            {error && <h1 className="notFound">City Not Found!</h1>}
             {weatherData && (
                 <div className="weatherDetail">
                     <h2 className="city">
@@ -47,12 +48,10 @@ export default function ShowingWeather({ weatherData }) {
                         </sup>
                     </div>
                     <p className="description">
-                        {/* <img
-                            src={(weatherData.weather[0].main == "Clouds") {
-
-                            }}
+                        <img
+                            src={`https://openweathermap.org/payload/api/media/file/${weatherData.weather[0].icon}.png`}
                             alt=""
-                        /> */}
+                        />
                         {weatherData.weather[0].description.toUpperCase()}
                     </p>
                     <div className="weather-details">

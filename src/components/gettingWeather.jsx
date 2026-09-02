@@ -4,14 +4,19 @@ export default function GettingWeather({ city, setCity, fetchWeather }) {
     }
 
     function handleSubmit(e) {
+        // if (city == "") {
+        //     e.preventDefault();
+        // } else {
         e.preventDefault();
         fetchWeather();
         setCity("");
+        // }
     }
 
     return (
         <form className="GettingWeather" onSubmit={handleSubmit}>
             <input
+                required
                 type="text"
                 placeholder="Enter City Name"
                 onChange={handleChange}
