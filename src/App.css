@@ -1,0 +1,113 @@
+body {
+    background-image: url(https://openweathermap.org/payload/api/media/file/clouds_bg.jpg);
+    background-size: 1536px 729px;
+    margin: 0;
+}
+.body {
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background-color: white;
+    width: 500px;
+    align-self: center;
+    position: absolute;
+    top: 100px;
+    box-shadow: 0px 0px 10px;
+    flex-direction: column;
+}
+.body:hover {
+    box-shadow: 0 0 25px;
+}
+.GettingWeather {
+    width: 360px;
+    height: 40px;
+    padding: 30px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    background-color: rgb(240, 240, 240);
+    width: 140px;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 2px rgb(107, 107, 107);
+    border: none;
+    border-radius: 10px;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(90, 90, 90);
+}
+input:focus::placeholder {
+    color: black;
+}
+
+button {
+    cursor: pointer;
+    width: 160px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 2px rgb(107, 107, 107);
+    background-color: rgb(240, 240, 240);
+    color: gray;
+}
+button:hover {
+    box-shadow: 0px 0px 10px rgb(90, 90, 90);
+    color: black;
+}
+.weatherDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    margin: 10px 0 40px 0;
+    padding-bottom: 10px;
+}
+.city {
+    margin: 15px 0;
+    font-size: 32px;
+}
+.country {
+    font-size: 18px;
+}
+.temp-unit {
+    cursor: pointer;
+}
+.date {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+}
+.temperature {
+    padding: 20px;
+    font-size: 55px;
+}
+.weather-details {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.temp-unit {
+    font-size: 18px;
+}
+.description {
+    margin: 12px 0;
+    font-size: 21px;
+}
+.col > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.col p:first-of-type {
+    margin: 5px 0;
+    font-size: 19px;
+}
+.col p:last-of-type {
+    margin: 3px 0;
+    font-size: 14px;
+}

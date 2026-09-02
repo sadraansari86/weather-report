@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import WeatherForm from "./components/gettingWeather";
+import GettingWeather from "./components/gettingWeather";
+import ShowingWeather from "./components/showingWeather";
 
 function App() {
     const [city, setCity] = useState("");
@@ -16,12 +17,14 @@ function App() {
     };
 
     return (
-        <div className="body">
-            <WeatherForm
+        <div className="body" style={{ height: !weatherData && "100px" }}>
+            <GettingWeather
                 city={city}
                 setCity={setCity}
                 fetchWeather={fetchWeather}
             />
+
+            <ShowingWeather weatherData={weatherData} />
         </div>
     );
 }

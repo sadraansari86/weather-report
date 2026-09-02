@@ -1,4 +1,4 @@
-export default function WeatherForm({ city, setCity, fetchWeather }) {
+export default function GettingWeather({ city, setCity, fetchWeather }) {
     function handleChange(e) {
         setCity(e.target.value);
     }
@@ -10,14 +10,14 @@ export default function WeatherForm({ city, setCity, fetchWeather }) {
     }
 
     return (
-        <form className="weatherForm" onSubmit={handleSubmit}>
+        <form className="GettingWeather" onSubmit={handleSubmit}>
             <input
                 type="text"
-                placeholder="Enter city name"
+                placeholder="Enter City Name"
                 onChange={handleChange}
                 value={city}
             />
-            <button>Get weather</button>
+            <button>Get Weather Report</button>
         </form>
     );
 }
