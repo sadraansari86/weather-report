@@ -1,4 +1,4 @@
-I'm Sadra Bagherzadeh Ansari and this is a weather report project.
+I'm Sadra Bagherzadeh Ansari and this is a weather report project, using weather-API.
 
 #
 
